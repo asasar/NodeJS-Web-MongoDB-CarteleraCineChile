@@ -1,0 +1,46 @@
+<navbar></navbar>
+<header >
+<div class="container-fluid">
+  <div class="row">
+    <span class="label label-success" ng-click="main.todos()">
+      Todos
+    </span>
+    <span class="badge btn" ng-repeat="cine in main.cines"  ng-click="main.unCine(cine)">{{cine.name.toString().replace("Cinemark" , "").replace("Cineplanet" , "").replace('Hoyts','').replace('(','').replace(')','')}}
+    </span>
+    <span class="label label-success" ng-click="main.todos()">
+      Todos
+    </span>
+  </div>
+  <h1>Peliculas en cartelera Chile</h1>
+  <h2 ng-show="main.showInfoCinePeli()">{{main.showOnlyThisCine}} </h2>
+  <div class="row">
+    <div class="col-sm-2 col-md-2" ng-repeat="peli in main.peliculas |  filter: {cines: {name: main.showOnlyThisCine}}">
+      <div class="thumbnail">
+        <img alt="..." ng-src="{{peli.img}}">
+        <div class="caption">
+          <h3>{{peli.name}}</h3>
+          <button ng-click="main.showCine(peli)">
+          <span>Cines</span>
+          </button>
+          <ul ng-show="peli.showme">
+            <li ng-repeat="cine in peli.cines">
+              {{cine.name}}
+            </li>
+          </ul>
+          <span ng-show="main.showInfoCinePeli()">
+            <span ng-repeat="cine in peli.cines | filter: {name:main.showOnlyThisCine}">
+              <p>
+                {{cine.name}}
+              </p>
+              <hr>
+              {{cine.infoCine}}
+              
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+<footer></footer>
