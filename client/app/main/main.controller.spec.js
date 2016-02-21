@@ -17,6 +17,8 @@ describe('Controller: MainController', function() {
     $httpBackend.expectGET('/api/cines')
       .respond(['HTML5 Boilerplate', 'AngularJS', 'Karma', 'Express']);
 
+    $httpBackend.expectGET('/api/peliculas')
+      .respond(['HTML5 Boilerplate', 'AngularJS', 'Karma', 'Express']);
     scope = $rootScope.$new();
     state = $state;
     MainController = $controller('MainController', {
@@ -27,5 +29,6 @@ describe('Controller: MainController', function() {
   it('should attach a list of cines to the controller', function() {
     $httpBackend.flush();
     expect(MainController.peliculas.length).toBe(4);
+    expect(MainController.cines.length).toBe(4);
   });
 });
