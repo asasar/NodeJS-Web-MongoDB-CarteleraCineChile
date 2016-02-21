@@ -1,3 +1,7 @@
 dependencies:
   pre:
     - sudo apt-get update; sudo apt-get install ruby-sass
+test:
+  pre:
+    - npm install -g bower
+    - bower install --config.directory=./client/bower_components
