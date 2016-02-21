@@ -44,54 +44,6 @@ describe('Cine API Router:', function() {
 
   });
 
-  describe('GET /api/cines/:id', function() {
 
-    it('should route to cine.controller.show', function() {
-      routerStub.get
-        .withArgs('/:id', 'cineCtrl.show')
-        .should.have.been.calledOnce;
-    });
-
-  });
-
-  describe('POST /api/cines', function() {
-
-    it('should route to cine.controller.create', function() {
-      routerStub.post
-        .withArgs('/', 'cineCtrl.create')
-        .should.have.been.calledOnce;
-    });
-
-  });
-
-  describe('PUT /api/cines/:id', function() {
-
-    it('should route to cine.controller.update', function() {
-      routerStub.put
-        .withArgs('/:id', 'cineCtrl.update')
-        .should.have.been.calledOnce;
-    });
-
-  });
-
-  describe('PATCH /api/cines/:id', function() {
-
-    it('should route to cine.controller.update', function() {
-      routerStub.patch
-        .withArgs('/:id', 'cineCtrl.update')
-        .should.have.been.calledOnce;
-    });
-
-  });
-
-  describe('DELETE /api/cines/:id', function() {
-
-    it('should route to cine.controller.destroy', function() {
-      routerStub.delete
-        .withArgs('/:id', 'cineCtrl.destroy')
-        .should.have.been.calledOnce;
-    });
-
-  });
 
 });

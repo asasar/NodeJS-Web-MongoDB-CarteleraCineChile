@@ -44,54 +44,5 @@ describe('Pelicula API Router:', function() {
 
   });
 
-  describe('GET /api/peliculas/:id', function() {
-
-    it('should route to pelicula.controller.show', function() {
-      routerStub.get
-        .withArgs('/:id', 'peliculaCtrl.show')
-        .should.have.been.calledOnce;
-    });
-
-  });
-
-  describe('POST /api/peliculas', function() {
-
-    it('should route to pelicula.controller.create', function() {
-      routerStub.post
-        .withArgs('/', 'peliculaCtrl.create')
-        .should.have.been.calledOnce;
-    });
-
-  });
-
-  describe('PUT /api/peliculas/:id', function() {
-
-    it('should route to pelicula.controller.update', function() {
-      routerStub.put
-        .withArgs('/:id', 'peliculaCtrl.update')
-        .should.have.been.calledOnce;
-    });
-
-  });
-
-  describe('PATCH /api/peliculas/:id', function() {
-
-    it('should route to pelicula.controller.update', function() {
-      routerStub.patch
-        .withArgs('/:id', 'peliculaCtrl.update')
-        .should.have.been.calledOnce;
-    });
-
-  });
-
-  describe('DELETE /api/peliculas/:id', function() {
-
-    it('should route to pelicula.controller.destroy', function() {
-      routerStub.delete
-        .withArgs('/:id', 'peliculaCtrl.destroy')
-        .should.have.been.calledOnce;
-    });
-
-  });
 
 });
