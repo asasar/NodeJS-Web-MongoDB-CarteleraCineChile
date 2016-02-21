@@ -3,5 +3,6 @@ dependencies:
     - sudo apt-get update; sudo apt-get install ruby-sass
 test:
   pre:
+    - gem install compass
     - npm install -g bower
     - bower install --config.directory=./client/bower_components
